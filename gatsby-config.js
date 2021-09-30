@@ -5,14 +5,18 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        icon: "src/images/icon.png",
+        fonts: [
+          `Montserrat\:100,400`, // you can also specify font weights and styles
+        ],
+        display: "swap",
       },
     },
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -22,6 +26,18 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Our Story`,
+        short_name: `Our Story`,
+        start_url: `/`,
+        background_color: `#0a192f`,
+        theme_color: `#64ffda`,
+        display: `standalone`,
+        icon: "./src/images/icon.png",
+      },
     },
   ],
 };
