@@ -16,7 +16,7 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    
+
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -37,7 +37,9 @@ module.exports = {
         theme_color: `#64ffda`,
         display: `standalone`,
         icon: "./src/images/icon.png",
+        cache_busting_mode: "none",
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };

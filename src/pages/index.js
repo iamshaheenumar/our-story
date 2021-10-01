@@ -37,6 +37,8 @@ const Home = () => {
     <>
       <Helmet>
         <title>Our Story  </title>
+        <meta charset="UTF-8"></meta>
+        <meta name="description" content="This the life story of some random people."></meta>
       </Helmet>
       <Main>
         <PageTitle>Our Story</PageTitle>
